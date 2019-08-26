@@ -11,7 +11,7 @@ setuptools.setup(
     description="Workspace build tool.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/vasil7444/workspace-puller",
+    url="https://github.com/VasiliyLysokobylko/workspace-puller",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
