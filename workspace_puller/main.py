@@ -9,7 +9,6 @@ def start():
     parser.add_argument('--bot_token', type=str)
     args = parser.parse_args()
     config_url = args.config_url
-    print('config_p: '+config_url)
     token = args.bot_token
     if config_url is not None:
         wp = WorkspacePuller(config_url=config_url, telegram_token=token)

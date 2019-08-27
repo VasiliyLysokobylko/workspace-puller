@@ -23,7 +23,6 @@ from workspace_puller import tools as t
 from workspace_puller.wp_telegram_bot import WPTelegramBot
 
 
-# TODO repeat auth if bad credentials in the drive_credentials file.
 class WorkspacePuller:
 
     def __init__(self, config_url: str, telegram_token=None):
@@ -88,7 +87,7 @@ class WorkspacePuller:
         elif self.config.gdrive_folders is not None and self.telegram_bot is None or self.config.telegram_channels is None:
             try:
                 gauth = GoogleAuth()
-                gauth.LoadClientConfigFile(client_config_file=client_config)  # TODO
+                gauth.LoadClientConfigFile(client_config_file=client_config)
                 gauth.CommandLineAuth()
                 gauth.SaveCredentialsFile(credentials_file=credentials_file)
             except Exception as e:
@@ -122,7 +121,7 @@ class WorkspacePuller:
                 download.download()
                 path = os.path.abspath(download.download_path)
                 _, extension = os.path.splitext(path)
-                if extension[1:] in shutil.get_archive_formats() and self.config.extract_archives:
+                if extension[1:] in dict(shutil.get_archive_formats()).keys() and self.config.extract_archives:
                     shutil.unpack_archive(path)
             except Exception as e:
                 t.log_message("ERROR. Download: " + item + ' FAILED.\n' + str(e))

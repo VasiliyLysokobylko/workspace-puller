@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="workspace-puller",
-    version="0.0.21",
+    version="0.0.22",
     author="onpositive",
     author_email="vasily@onpositive.com",
     description="Workspace build tool.",
