@@ -19,7 +19,7 @@ This tools allows to:
 
 `workspace-puller --config_url {url to the config file} --bot_token {telegram bot token}`
 
-**config_url** parameter specifies the URL to the configuration file (Required). Escape value with quotes (Recomended).
+**config_url** parameter specifies the URL to the configuration file (Required). Enclose the value in quotes (Recomended).
 
 **bot_token** parameter sets the Telegram bot token (Optional). [See: Creating a new bot](https://core.telegram.org/bots#6-botfather)
 
